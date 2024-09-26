@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms_lab1", "Algorithms_lab1\Algorithms_lab1.csproj", "{C946DECC-8222-47BA-9F6A-02AABCA6A642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsLogic", "AlgorithmsLogic\AlgorithmsLogic.csproj", "{9FF3BB11-4130-4E2A-ACE9-2FB21C85C8F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C946DECC-8222-47BA-9F6A-02AABCA6A642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C946DECC-8222-47BA-9F6A-02AABCA6A642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C946DECC-8222-47BA-9F6A-02AABCA6A642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C946DECC-8222-47BA-9F6A-02AABCA6A642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FF3BB11-4130-4E2A-ACE9-2FB21C85C8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF3BB11-4130-4E2A-ACE9-2FB21C85C8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF3BB11-4130-4E2A-ACE9-2FB21C85C8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF3BB11-4130-4E2A-ACE9-2FB21C85C8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
