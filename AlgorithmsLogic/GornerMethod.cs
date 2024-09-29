@@ -2,17 +2,10 @@
 
 public class GornerMethod
 {
-    private int[] Vector { get; init; }
-
-    public GornerMethod(int[] inputVector)
+    public static double Function(int[] vector, double varible, int iterationNumber)
     {
-        Vector = inputVector;
-    }
-
-    public double Function(double varible, int iterationNumber)
-    {
-        if (iterationNumber >= Vector.Length)
+        if (iterationNumber >= vector.Length)
             return 1;
-        return Vector[iterationNumber] + varible * Function(varible,  iterationNumber + 1);
+        return vector[iterationNumber] + varible * Function( vector, varible,  iterationNumber + 1);
     }
 }

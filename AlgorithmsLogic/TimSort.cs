@@ -2,18 +2,11 @@
 
 public class TimSort
 {
-    private int[] Vector { get; init; }
-
-    public TimSort(int[] inputVector)
-    {
-        Vector = inputVector;
-    }
-
-    public void Function(int n)
+    public static void Function(int[] vector, int n)
     {
 
         for (int i = 0; i < n; i += RUN)
-            insertionSort(i, Math.Min((i + RUN - 1), (n - 1)));
+            insertionSort(vector, i, Math.Min((i + RUN - 1), (n - 1)));
 
         for (int size = RUN; size < n; size = 2 * size)
         {
@@ -26,39 +19,37 @@ public class TimSort
                                     (n - 1));
 
                 if (mid < right)
-                    merge(left, mid, right);
+                    merge(vector, left, mid, right);
             }
         }
     }
 
+    private const int RUN = 32;
 
-
-    public const int RUN = 32;
-
-    private void insertionSort( int left, int right)        
+    private static void insertionSort(int[] vector, int left, int right)        
     {
         for (int i = left + 1; i <= right; i++)
         {
-            int temp = Vector[i];
+            int temp = vector[i];
             int j = i - 1;
-            while (j >= left && Vector[j] > temp)
+            while (j >= left && vector[j] > temp)
             {
-                Vector[j + 1] = Vector[j];
+                vector[j + 1] = vector[j];
                 j--;
             }
-            Vector[j + 1] = temp;
+            vector[j + 1] = temp;
         }
     }
 
-    private void merge(int l, int m, int r)
+    private static void merge(int[] vector, int l, int m, int r)
     {
         int len1 = m - l + 1, len2 = r - m;
         int[] left = new int[len1];
         int[] right = new int[len2];
         for (int x = 0; x < len1; x++)
-            left[x] = Vector[l + x];
+            left[x] = vector[l + x];
         for (int x = 0; x < len2; x++)
-            right[x] = Vector[m + 1 + x];
+            right[x] = vector[m + 1 + x];
 
         int i = 0;
         int j = 0;
@@ -68,12 +59,12 @@ public class TimSort
         {
             if (left[i] <= right[j])
             {
-                Vector[k] = left[i];
+                vector[k] = left[i];
                 i++;
             }
             else
             {
-                Vector[k] = right[j];
+                vector[k] = right[j];
                 j++;
             }
             k++;
@@ -81,14 +72,14 @@ public class TimSort
 
         while (i < len1)
         {
-            Vector[k] = left[i];
+            vector[k] = left[i];
             k++;
             i++;
         }
 
         while (j < len2)
         {
-            Vector[k] = right[j];
+            vector[k] = right[j];
             k++;
             j++;
         }

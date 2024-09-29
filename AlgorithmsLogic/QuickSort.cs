@@ -2,26 +2,19 @@
 
 public class QuickSort
 {
-    private int[] Vector { get; init; }
-
-    public QuickSort(int[] inputVector)
-    {
-        Vector = inputVector; 
-    }
-
-    public void Function(int low, int high)
+    public static void Function(int[] vector, int low, int high)
     {
         if (low < high)
         {
-            int pivotIndex = Partition(low, high);
-            Function(low, pivotIndex - 1);
-            Function(pivotIndex + 1, high);
+            int pivotIndex = Partition(vector, low, high);
+            Function(vector, low, pivotIndex - 1);
+            Function(vector, pivotIndex + 1, high);
         }
     }
 
-    private int Partition( int low, int high)
+    private static int Partition(int[] vector, int low, int high)
     {
-        int pivot = Vector[(low + high) / 2];
+        int pivot = vector[(low + high) / 2];
         int i = low - 1;
         int j = high + 1;
         while (true)
@@ -29,24 +22,24 @@ public class QuickSort
             do
             {
                 i++;
-            } while (Vector[i] < pivot);
+            } while (vector[i] < pivot);
 
             do
             {
                 j--;
-            } while (Vector[j] > pivot);
+            } while (vector[j] > pivot);
 
             if (i >= j)
                 return j;
 
-            Swap(i, j);
+            Swap(vector, i, j);
         }
     }
 
-    private void Swap(int index1, int index2)
+    private static void Swap(int[] vector, int index1, int index2)
     {
-        int temp = Vector[index1];
-        Vector[index1] = Vector[index2];
-        Vector[index2] = temp;
+        int temp = vector[index1];
+        vector[index1] = vector[index2];
+        vector[index2] = temp;
     }
 }

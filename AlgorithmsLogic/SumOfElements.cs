@@ -4,19 +4,12 @@ namespace AlgorithmsLogic;
 
 public class SumOfElements
 {
-    private int[] Vector {  get; init; }
-
-    public SumOfElements(int[] inputVector)
-    {
-        Vector = inputVector;
-    }
-
-    public long Function()
+    public static long Function(int[] vector)
     {
         int sum = 0;
-        for (int i = 0; i < Vector.Length; i++)
+        for (int i = 0; i < vector.Length; i++)
         {
-            sum += Vector[i];
+            sum += vector[i];
         }
         return sum;
     }
