@@ -11,21 +11,25 @@ namespace AlgorithmsLogic
         public static int Function(int[] vector)
         {
             int size = vector.Length;
-            int max_so_far = int.MinValue,
-                max_ending_here = 0;
+            int maxSoFar = int.MinValue;
+            int maxEndingHere = 0;
 
             for (int i = 0; i < size; i++)
             {
-                max_ending_here = max_ending_here + vector[i];
+                maxEndingHere += vector[i];
 
-                if (max_so_far < max_ending_here)
-                    max_so_far = max_ending_here;
+                if (maxSoFar < maxEndingHere)
+                {
+                    maxSoFar = maxEndingHere;
+                }
 
-                if (max_ending_here < 0)
-                    max_ending_here = 0;
+                if (maxEndingHere < 0)
+                {
+                    maxEndingHere = 0;
+                }
             }
 
-            return max_so_far;
+            return maxSoFar;
         }
     }
 }
