@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmsLogic
 {
-    public class RecPow
+    public class RecPowAndQuickPow
     {
         public static void Function(int[] vector, int number)
         {
