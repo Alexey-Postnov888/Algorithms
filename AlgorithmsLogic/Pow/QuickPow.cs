@@ -12,7 +12,7 @@ namespace AlgorithmsLogic
         {
             for (int i = 0; i < vector.Length; i++)
             {
-                long redult = AuxiliaryFunction(number, vector[i]);
+                long result = AuxiliaryFunction(number, vector[i]);
             }
         }
 
@@ -26,7 +26,7 @@ namespace AlgorithmsLogic
                 if(count % 2 == 0)
                 {
                     temp *= temp;
-                    count %= 2;
+                    count /= 2;
                 }
                 else
                 {
